@@ -6,28 +6,6 @@
 
 ---
 
-## 📑 Table of Contents
-
-- [Overview](#overview)
-- [Project Objectives](#project-objectives)
-- [Key Features](#key-features)
-- [Application Workflow](#application-workflow)
-- [Application Preview](#application-preview)
-- [Technology Stack](#technology-stack)
-- [System Architecture](#system-architecture)
-- [Project Structure](#project-structure)
-- [Database Design](#database-design)
-- [API Overview](#api-overview)
-- [Installation and Setup](#installation-and-setup)
-- [Environment Configuration](#environment-configuration)
-- [Running the Application](#running-the-application)
-- [Security and Best Practices](#security-and-best-practices)
-- [Current Scope and Limitations](#current-scope-and-limitations)
-- [Future Enhancements](#future-enhancements)
-- [Author](#author)
-
----
-
 ## 📘 Overview
 
 **EduPilot 2.0 is a full-stack AI-powered study assistant designed to make learning more structured, interactive, and manageable.**
