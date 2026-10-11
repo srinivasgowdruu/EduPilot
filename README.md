@@ -8,7 +8,7 @@ An AI-powered learning platform for notes, summaries, quizzes, flashcards, and p
 
 ## 📘 Overview
 
-**EduPilot 2.0** is a full-stack AI-powered study assistant designed to make learning more structured, interactive, and manageable.
+**EduPilot 2.0** is a AI-powered study assistant designed to make learning more structured, interactive, and manageable.
 
 Students often switch between different tools to prepare notes, summarize documents, practise questions, revise concepts, and organize study schedules. EduPilot brings these activities together in one application.
 
@@ -281,7 +281,7 @@ flowchart TD
     CONTENT <--> YOUTUBE
     DOC --> CONTENT
 ```
-
+---
 
 ### Architecture Components
 
