@@ -221,6 +221,66 @@ Explore related videos for additional learning support.
 
 EduPilot follows a client-server architecture. The React frontend communicates with a Flask backend, which coordinates application logic, database operations, document processing, and configured external services.
 
+### Architecture Flowchart
+
+```mermaid
+flowchart TD
+    U["Student / User"]
+
+    subgraph F["Frontend — React + Vite"]
+        UI["Learning Interface"]
+        AUTH["Login and Registration"]
+        DASH["Learning Dashboard"]
+        NOTES["Notes and Summaries"]
+        QUIZ["Quizzes and Flashcards"]
+        CHAT["AI Study Chatbot"]
+        PLAN["Study Planner"]
+        ANALYSIS["Learning Analysis"]
+    end
+
+    subgraph B["Backend — Python + Flask"]
+        API["Flask API"]
+        SEC["Authentication and Validation"]
+        LOGIC["Application Logic"]
+        DOC["Document Processing"]
+        CONTENT["Learning Content Services"]
+    end
+
+    subgraph D["Data Layer"]
+        ORM["SQLAlchemy ORM"]
+        DB[("SQLite Database")]
+    end
+
+    GEMINI["Google Gemini API"]
+    YOUTUBE["YouTube Data API"]
+
+    U --> UI
+    UI --> AUTH
+    UI --> DASH
+    DASH --> NOTES
+    DASH --> QUIZ
+    DASH --> CHAT
+    DASH --> PLAN
+    DASH --> ANALYSIS
+
+    AUTH --> API
+    NOTES --> API
+    QUIZ --> API
+    CHAT --> API
+    PLAN --> API
+    ANALYSIS --> API
+
+    API --> SEC
+    SEC --> LOGIC
+    LOGIC --> DOC
+    LOGIC --> CONTENT
+    LOGIC <--> ORM
+    ORM <--> DB
+
+    CONTENT <--> GEMINI
+    CONTENT <--> YOUTUBE
+    DOC --> CONTENT
+```
 
 
 ### Architecture Components
