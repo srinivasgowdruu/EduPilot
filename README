@@ -1,190 +1,117 @@
 # 🎓 EduPilot — AI-Powered Study Assistant
 
-## Your learning companion for smarter study sessions.
+**Your learning companion for smarter study sessions.**
 
-###  An AI-powered learning platform that transforms topics and study materials into structured notes, summaries, quizzes, flashcards, and personalized study guidance.
+An AI-powered learning platform for notes, summaries, quizzes, flashcards, and personalized study guidance.
 
 ---
 
 ## 📘 Overview
 
-**EduPilot 2.0 is a full-stack AI-powered study assistant designed to make learning more structured, interactive, and manageable.**
+**EduPilot 2.0** is a full-stack AI-powered study assistant designed to make learning more structured, interactive, and manageable.
 
-Students often need to switch between different tools to prepare notes, summarize documents, practise questions, revise concepts, and organize study schedules. EduPilot brings these activities together in one application.
+Students often switch between different tools to prepare notes, summarize documents, practise questions, revise concepts, and organize study schedules. EduPilot brings these activities together in one application.
 
-Users can enter a topic or upload supported study material to generate learning resources. They can then revise using flashcards, test their understanding with quizzes, ask questions through an AI study chatbot, examine their quiz performance, and schedule future review sessions.
+Users can enter a topic or upload study material to generate learning resources. They can revise using flashcards, test their understanding with quizzes, ask questions through an AI study chatbot, review quiz performance, and plan future study sessions.
 
 The application combines a React frontend with a Python Flask backend, an SQLite database, and external AI services.
-
-**What makes EduPilot useful?**
-
-- Topic-based learning: Turn a subject or concept into structured study material.
-- Document-based learning: Use existing notes and documents as learning inputs.
-- Active revision: Practise with quizzes and flashcards.
-- Learning insights: Review quiz results and identify areas that need more attention.
-- Study organization: Plan review sessions and manage upcoming study activities.
-- Integrated experience: Access these learning tools through a consistent interface.
 
 ---
 
 ## 🎯 Project Objectives
 
-EduPilot was developed with the following objectives:
-
-1. Simplify the preparation of study notes and summaries.
-2. Support learning from both user-provided topics and uploaded documents.
-3. Encourage active recall through interactive quizzes and flashcards.
-4. Help learners understand their performance using quiz history and learning analysis.
-5. Organize revision through a study planner.
-6. Provide an AI-assisted interface for clarifying study concepts.
-7. Combine these capabilities in a maintainable full-stack web application.
+- Simplify the preparation of study notes and summaries.
+- Support learning from topics and uploaded documents.
+- Encourage active recall through quizzes and flashcards.
+- Help learners understand their performance.
+- Organize revision through a study planner.
+- Provide AI-assisted explanations of study concepts.
+- Integrate learning tools into one full-stack application.
 
 ---
 
 ## ✨ Key Features
 
-### 1. 📝 AI-Powered Study Notes
+### 📝 AI-Powered Notes and Summaries
 
-Generate structured learning material from a topic entered by the user.
+- Generate structured notes from a study topic.
+- Create concise summaries for quick revision.
+- Display formatted learning content using Markdown.
 
-- Generate topic-specific study notes using the configured AI service.
-- Organize content into headings, paragraphs, and bullet points.
-- Render formatted content using Markdown.
-- Present learning content in a dedicated study interface.
+### 📂 Document Upload and Analysis
 
-### 2. 📝 Concise Summaries
-
-Convert learning content into a shorter overview that highlights important ideas.
-
-- Generate concise summaries for revision.
-- Review key concepts without rereading all the notes.
-- Display summaries alongside the associated learning material.
-
-### 3. 📂 Document Upload and Analysis
-
-Use existing study documents as the input for AI-assisted learning.
-
-- Upload supported document formats through the learning interface.
+- Upload supported study documents.
 - Extract readable text from uploaded files.
-- Generate study notes and a concise summary from extracted content.
-- Associate document-based learning material with a saved session.
+- Generate study notes and summaries from document content.
+- Associate generated material with saved learning sessions.
 
-The interface advertises PDF, DOC, DOCX, and TXT files. The actual formats supported by the backend must be checked against its extraction implementation before publishing this statement as a guarantee for every format.
+### 🧠 Interactive Quizzes
 
-### 4. 🧠 Interactive Quiz Generation
+- Generate multiple-choice questions from learning material.
+- Select answers and submit attempts.
+- View scores and quiz results.
+- Record quiz attempts for later review.
 
-Create multiple-choice quizzes from the generated study notes.
+### 🗂️ Flashcards
 
-- Generate quiz questions based on the supplied notes.
-- Select an answer for each question.
-- Submit answers and view feedback.
-- Track the score throughout the quiz.
-- View the final result after completing the quiz.
-- Generate another set of questions when supported by the current interface.
+- Generate question-and-answer cards from study material.
+- Flip cards to reveal answers.
+- Navigate between flashcards.
+- Export flashcards to CSV.
 
-Quiz generation is designed to use the supplied learning material as its basis, helping users assess their understanding of the content they studied.
+### 🤖 AI Study Chatbot
 
-### 5. 🗂️ Flashcards for Active Recall
+- Ask questions about study concepts and notes.
+- Receive AI-generated explanations.
+- Interact through a dedicated chat interface.
 
-Revise concepts through question-and-answer cards.
+### 📅 Study Planner
 
-- Generate flashcards from learning content.
-- Flip a card to reveal its answer.
-- Navigate forward and backward between cards.
-- Download flashcards in CSV format.
+- Create study and revision entries.
+- Choose review dates and planned durations.
+- Configure study and break intervals.
+- View and manage upcoming study sessions.
 
-Flashcards provide a simple way to practise recall and revisit important concepts.
+### 📊 Quiz History and Learning Analysis
 
-### 6. 🤖 AI Study Chatbot
+- Review previous quiz attempts.
+- Track scores and percentages.
+- Identify stronger and weaker topics where supported by recorded data.
+- View available learning recommendations.
 
-Interact with an AI assistant while reviewing study notes.
-
-- Ask questions related to the current learning material.
-- Receive AI-generated explanations and clarification.
-- View the conversation in a dedicated chat interface.
-- Use a message composer with loading feedback during requests.
-
-The chatbot is intended to complement the study material rather than replace the underlying notes.
-
-### 7. 📅 Study Planner
-
-Organize upcoming revision sessions using the built-in study planner.
-
-- Create a review entry for the current topic.
-- Select a review date.
-- Set the total planned duration.
-- Configure study-block and break durations.
-- View upcoming review entries.
-- Delete planned entries when they are no longer needed.
-
-Study-plan entries are managed through the backend and retrieved for the authenticated user.
-
-### 8. 📊 Quiz History and Learning Analysis
-
-Use recorded quiz attempts to understand learning progress.
-
-- Store quiz attempts with their associated topic and session.
-- Record scores, total questions, percentages, and attempt details.
-- Retrieve previous quiz attempts.
-- Analyse recent performance to identify weaker and stronger topics.
-- Display AI-generated or application-generated learning recommendations where supported.
-
-Learning analysis depends on the performance data available. It becomes more useful as the learner completes additional quizzes.
-
-### 9. 💾 Saved Learning Sessions
-
-Keep generated learning material organized across sessions.
+### 💾 Saved Learning Sessions
 
 - Save generated notes and summaries.
-- Associate learning content with a topic or uploaded document.
-- Retrieve saved session history.
-- Reopen previous learning sessions through the application interface.
-- Associate quiz and flashcard data with sessions where supported by the backend.
+- Revisit previous learning sessions.
+- Associate learning resources with topics or uploaded documents.
 
-### 10. 📑 PDF Export
+### 📄 PDF Export
 
-Export supported learning content as a PDF document for offline review or printing.
+Export supported learning content as a PDF for offline review.
 
-### 11. ▶️ Related YouTube Video Recommendations
+### ▶️ YouTube Learning Recommendations
 
-Recommends relevant YouTube learning videos based on the uploaded document or study topic, helping users explore concepts through additional visual learning resources.
+Discover related YouTube learning videos based on supported study topics or uploaded content.
 
-### 12. 🔐 Authentication and Protected Routes
+### 🔐 Authentication
 
-EduPilot includes a user authentication system.
-
-- Registration and login interfaces.
+- User registration and login.
 - Password hashing using Flask-Bcrypt.
 - JWT-based authentication for protected backend operations.
-- Protected frontend routes.
-- User-specific study-plan and learning-history operations where implemented.
-
-### 13. 🎨 Modern, Responsive Interface
-
-The frontend uses React and Material UI to provide a consistent learning experience.
-
-- Blue-purple visual theme.
-- Dedicated login and registration interfaces.
-- Main learning dashboard.
-- Styled notes, summaries, quizzes, and flashcards.
-- Floating controls for quiz generation, flashcards, PDF export, and AI chat.
-- Dialog-based study planner and chatbot interfaces.
-- Responsive layout and interactive loading states.
+- User-specific access controls where implemented.
 
 ---
 
 ## 🔄 Application Workflow
 
-The typical learning workflow is:
-
-1. Sign in: Register or log in to access the learning dashboard.
-2. Choose a learning input: Enter a topic or select a supported document.
-3. Generate learning material: The frontend sends a request to the Flask backend.
-4. Process with AI: The backend prepares the input and requests generated content from the configured AI service.
-5. Save the session: The application stores supported session data in SQLite.
-6. Study and revise: Review notes and summaries, then generate quizzes or flashcards.
-7. Review performance: Save quiz attempts and examine available learning insights.
-8. Plan revision: Add upcoming study reviews through the study planner.
+1. **Sign in:** Register or log in to EduPilot.
+2. **Choose a topic:** Enter a subject or upload supported study material.
+3. **Generate content:** Send the request to the Flask backend.
+4. **Process the input:** Use the configured AI service to generate learning resources.
+5. **Save learning material:** Store supported session data in SQLite.
+6. **Revise:** Review notes, summaries, quizzes, and flashcards.
+7. **Analyse progress:** Review available quiz history and learning insights.
+8. **Plan revision:** Schedule upcoming study sessions.
 
 ---
 
@@ -192,23 +119,23 @@ The typical learning workflow is:
 
 ### 👤 Login Page
 
-The login page provides secure access to the EduPilot learning dashboard.
+Access the EduPilot learning dashboard through the login interface.
 
 ![EduPilot Login](screenshots/login.png)
 
 ---
 
-### 📝 Register Page
+### 📝 Registration Page
 
-New users can create an account to access EduPilot's AI-powered learning features.
+Create an account to access the learning tools.
 
-![EduPilot Register](screenshots/register.png)
+![EduPilot Registration](screenshots/register.png)
 
 ---
 
 ### 🎓 Main Dashboard
 
-The dashboard allows users to generate learning content from topics or upload study materials.
+Generate learning content from topics or supported study documents.
 
 ![EduPilot Dashboard](screenshots/dashboard.png)
 
@@ -216,377 +143,240 @@ The dashboard allows users to generate learning content from topics or upload st
 
 ### 📚 Study Notes and Summary
 
-EduPilot analyzes uploaded documents and generates structured study notes and concise summaries.
+Review structured study notes and concise summaries generated from learning material.
 
-![EduPilot Summary and Notes](screenshots/notes-summary.png)
+![EduPilot Notes and Summary](screenshots/notes-summary.png)
 
 ---
 
 ### 🧠 Interactive Quiz
 
-Users can test their understanding through AI-generated quizzes based on their study topics.
+Test your understanding through quizzes based on study material.
 
 ![EduPilot Quiz](screenshots/quiz.png)
 
 ---
 
-### 📊 AI Learning Analysis and Recommendations
+### 📊 AI Learning Analysis
 
-Analyzes quiz performance to highlight strengths, identify areas for improvement, and suggest personalized next steps.
+Review quiz performance and available learning recommendations.
 
-![EduPilot AI Learning Analysis](screenshots/ai-analysis.png)
+![EduPilot Learning Analysis](screenshots/ai-analysis.png)
 
 ---
 
 ### 🗂️ Flashcards
 
-Generates flashcards to help users revise key concepts and reinforce learning.
+Practise active recall and revise important concepts.
 
-![EduPilot Falshcards](screenshots/flashcards.png)
+![EduPilot Flashcards](screenshots/flashcards.png)
 
 ---
 
 ### 📅 Study Planner
 
-Helps users organize study sessions and schedule upcoming reviews.
+Organize revision sessions and schedule upcoming reviews.
 
 ![EduPilot Study Planner](screenshots/study-planner.png)
 
 ---
 
-### 💬 AI Chatbot
+### 💬 AI Study Chatbot
 
-Allows users to ask questions about their study notes and clarify concepts.
+Ask questions and clarify concepts while studying.
 
-![EduPilot AI Chatbot](screenshots/chatbot.png)
+![EduPilot Chatbot](screenshots/chatbot.png)
 
 ---
 
-### ▶️ YouTube Videos Recommendations
+### ▶️ YouTube Learning Videos
 
-Recommends relevent YouTube Learning Videos based on the uploaded content to the users.
+Explore related videos for additional learning support.
 
- ![Related Youtube Videos](screenshots/youtube.png)
+![EduPilot YouTube Recommendations](screenshots/youtube.png)
 
 ---
 
 ## 🛠️ Technology Stack
 
-Layer| Technologies
-Frontend| React, JavaScript
-UI components| Material UI (MUI)
-Routing| React Router
-HTTP requests| Axios
-Backend| Python, Flask
-ORM and persistence| Flask-SQLAlchemy, SQLite
-AI integration| Google Gemini API
-Video API integration| YouTube Data API, where used by the backend
-Authentication| JWT, Flask-Bcrypt
-Markdown rendering| React Markdown, remark-gfm
-Date utilities| date-fns
-Date selection| MUI Date Pickers
-Carousel components| React Slick
-Document processing| Python libraries used by the backend for supported formats
-Frontend development tooling| Vite, npm
-
-The final dependency list should be verified against the current "frontend/package.json" and backend "requirements.txt".
+| Layer | Technologies |
+|---|---|
+| Frontend | React, JavaScript |
+| UI Components | Material UI (MUI) |
+| Routing | React Router |
+| HTTP Requests | Axios |
+| Backend | Python, Flask |
+| Database | SQLite |
+| ORM | Flask-SQLAlchemy |
+| AI Integration | Google Gemini API |
+| Video Recommendations | YouTube Data API |
+| Authentication | JWT, Flask-Bcrypt |
+| Markdown Rendering | React Markdown, remark-gfm |
+| Frontend Tooling | Vite, npm |
+| Document Processing | Python libraries configured in the backend |
 
 ---
 
-# 🏗️ System Architecture
+## 🏗️ System Architecture
 
-EduPilot 2.0 follows a full-stack client–server architecture that integrates the React frontend, Flask backend, application services, SQLite database, and external APIs.
+EduPilot follows a client-server architecture. The React frontend communicates with a Flask backend, which coordinates application logic, database operations, document processing, and configured external services.
 
-The following flowchart illustrates the major components and how they interact throughout the learning process.
+### Architecture Flowchart
 
-#### 📊 Architecture Flowchart
-```text
+```mermaid
 flowchart TD
-    USER(["👤 Student / User"])
+    U["Student / User"]
 
-    subgraph FRONTEND["🎨 Frontend — React + Vite"]
-        direction TB
-        UI["EduPilot User Interface"]
-        AUTH["🔐 Login & Registration"]
-        DASH["📚 Learning Dashboard"]
-        NOTES["📝 AI Notes & Summaries"]
-        DOCS["📄 Document Upload & Analysis"]
-        QUIZ["🧠 Interactive Quizzes"]
-        FLASH["🗂️ Flashcards"]
-        CHAT["🤖 AI Study Chatbot"]
-        PLAN["📅 Study Planner"]
-        ANALYSIS["📊 Learning Analysis"]
-        CLIENT["📡 Axios API Client"]
-
-        UI --> AUTH
-        UI --> DASH
-        DASH --> NOTES
-        DASH --> DOCS
-        DASH --> QUIZ
-        DASH --> FLASH
-        DASH --> CHAT
-        DASH --> PLAN
-        DASH --> ANALYSIS
-
-        AUTH --> CLIENT
-        NOTES --> CLIENT
-        DOCS --> CLIENT
-        QUIZ --> CLIENT
-        FLASH --> CLIENT
-        CHAT --> CLIENT
-        PLAN --> CLIENT
-        ANALYSIS --> CLIENT
+    subgraph F["Frontend — React + Vite"]
+        UI["Learning Interface"]
+        AUTH["Login and Registration"]
+        DASH["Learning Dashboard"]
+        NOTES["Notes and Summaries"]
+        QUIZ["Quizzes and Flashcards"]
+        CHAT["AI Study Chatbot"]
+        PLAN["Study Planner"]
+        ANALYSIS["Learning Analysis"]
     end
 
-    subgraph BACKEND["⚙️ Backend — Python + Flask"]
-        direction TB
-        API["Flask API Routes"]
-        VALIDATE["Request Validation"]
-        SECURITY["JWT Authentication & Access Control"]
+    subgraph B["Backend — Python + Flask"]
+        API["Flask API"]
+        SEC["Authentication and Validation"]
         LOGIC["Application Logic"]
-
-        API --> VALIDATE
-        VALIDATE --> SECURITY
-        SECURITY --> LOGIC
+        DOC["Document Processing"]
+        CONTENT["Learning Content Services"]
     end
 
-    subgraph SERVICES["🧩 Learning Services"]
-        direction TB
-        CONTENT["Content Generation"]
-        DOCUMENT["Document Text Extraction"]
-        QUIZ_SERVICE["Quiz Processing & Attempt Recording"]
-        FLASH_SERVICE["Flashcard Processing & CSV Export"]
-        CHAT_SERVICE["AI Chat Processing"]
-        PLANNER["Study Plan Management"]
-        INSIGHTS["Performance & Topic Analysis"]
-        SESSION["Saved Session Management"]
-        PDF["PDF Export"]
-    end
-
-    subgraph DATABASE["🗄️ Database Layer"]
+    subgraph D["Data Layer"]
         ORM["SQLAlchemy ORM"]
         DB[("SQLite Database")]
-        USERDATA["User Records"]
-        SAVED["Saved Learning Sessions"]
-        ATTEMPTS["Quiz Attempts"]
-        PLANS["Study Plan Entries"]
-
-        ORM <--> DB
-        DB --- USERDATA
-        DB --- SAVED
-        DB --- ATTEMPTS
-        DB --- PLANS
     end
 
-    subgraph EXTERNAL["🌐 External Integrations"]
-        GEMINI["Google Gemini API"]
-        YOUTUBE["YouTube Data API<br/>Where Configured"]
-    end
+    GEMINI["Google Gemini API"]
+    YOUTUBE["YouTube Data API"]
 
-    USER --> UI
-    CLIENT <-->|"HTTP / JSON"| API
+    U --> UI
+    UI --> AUTH
+    UI --> DASH
+    DASH --> NOTES
+    DASH --> QUIZ
+    DASH --> CHAT
+    DASH --> PLAN
+    DASH --> ANALYSIS
 
+    AUTH --> API
+    NOTES --> API
+    QUIZ --> API
+    CHAT --> API
+    PLAN --> API
+    ANALYSIS --> API
+
+    API --> SEC
+    SEC --> LOGIC
+    LOGIC --> DOC
     LOGIC --> CONTENT
-    LOGIC --> DOCUMENT
-    LOGIC --> QUIZ_SERVICE
-    LOGIC --> FLASH_SERVICE
-    LOGIC --> CHAT_SERVICE
-    LOGIC --> PLANNER
-    LOGIC --> INSIGHTS
-    LOGIC --> SESSION
-    LOGIC --> PDF
-
-    DOCUMENT --> CONTENT
+    LOGIC <--> ORM
+    ORM <--> DB
 
     CONTENT <--> GEMINI
-    QUIZ_SERVICE <--> GEMINI
-    FLASH_SERVICE <--> GEMINI
-    CHAT_SERVICE <--> GEMINI
     CONTENT <--> YOUTUBE
-
-    CONTENT <--> ORM
-    DOCUMENT <--> ORM
-    QUIZ_SERVICE <--> ORM
-    PLANNER <--> ORM
-    INSIGHTS <--> ORM
-    SESSION <--> ORM
+    DOC --> CONTENT
 ```
-
-#### 🔄 Request and Response Flow
-```text
-flowchart TD
-    A(["👤 User Action"])
-    B["React Frontend"]
-    C["Axios HTTP Request"]
-    D["Flask API Endpoint"]
-    E["Validate Input & Authentication"]
-    F{"Request Valid and Authorized?"}
-    G["Return Error Response"]
-    H["Execute Application Workflow"]
-    I{"External AI Service Required?"}
-    J["Call Google Gemini API"]
-    K["Process Result"]
-    L[("Save or Retrieve Data<br/>SQLite + SQLAlchemy")]
-    M["Return API Response"]
-    N["Update React Interface"]
-    O(["✅ Result Displayed to User"])
-
-    A --> B --> C --> D --> E --> F
-    F -- No --> G
-    G --> N
-    F -- Yes --> H --> I
-    I -- Yes --> J --> K
-    I -- No --> K
-    K --> L --> M --> N --> O
-```
-
-#### 🧱 Architecture Components
-
-Layer| Main Responsibilities
-🎨 Frontend| User interface, authentication screens, dashboard, notes, summaries, quizzes, flashcards, chatbot, and study planner.
-📡 API Communication| Sends frontend requests and receives responses through Axios and HTTP.
-⚙️ Backend| Flask routes, input validation, authentication checks, business logic, and coordination of application workflows.
-🧠 Learning Services| AI content generation, document processing, quiz handling, flashcards, chatbot requests, study planning, learning analysis, and exports.
-🗄️ Database| Persists supported user records, saved sessions, quiz attempts, and study-plan entries using SQLAlchemy and SQLite.
-🌐 External APIs| Google Gemini for configured AI features and YouTube Data API where enabled.
-
-Security note: API keys remain on the backend in environment variables. Protected operations should verify authentication and user ownership before accessing private records.
-
-The flowcharts describe the logical architecture. Actual routes, model relationships, and external integrations depend on the current backend implementation.
-
 ---
 
-#### Frontend Responsibilities
+### Architecture Components
 
-The React application manages the user interface, user interactions, local component state, navigation, and requests to the backend API.
+- Frontend: Manages screens, user interactions, and API requests.
+- Backend: Handles requests, authentication, validation, and learning workflows.
+- Learning services: Coordinate configured AI tasks and document processing.
+- Database: Persists supported user records, saved sessions, quiz attempts, and study-plan entries.
+- External integrations: Provide AI-generated content and video recommendations where configured.
 
-#### Backend Responsibilities
-
-The Flask application handles API requests, authentication checks, learning workflows, database operations, document processing, and communication with configured external services.
-
-#### Database Responsibilities
-
-SQLite provides persistent storage for supported application records, including users, saved learning sessions, quiz attempts, and study-plan entries.
-
-#### AI Integration
-
-The Google Gemini API is used for configured AI-assisted tasks such as generating learning material, quizzes, or explanations. The exact model and task allocation depend on the current backend configuration.
+The diagram represents the logical architecture. Exact routes, database relationships, and integrations depend on the current implementation.
 
 ---
 
 ## 📁 Project Structure
 
-The following structure reflects the main folders visible in the current project. Update individual filenames to match the final repository before publishing.
 ```text
-
-EDU-Pilot /
-│
-├── backend/
-│   ├── app.py
-│   ├── study_plan.db
-│   ├── requirements.txt
-│   ├── .env
-│   ├── tests/
-│   └── ...
-│
-├── frontend/
-│   ├── public/
-│   │   ├── edupilot-icon.jpeg
-│   │   ├── favicon.svg
-│   │   ├── icons.svg
-│   │   └── LLbg.png
-│   │
-│   ├── src/
-│   │   ├── context/
-│   │   │   ├── AuthContext.jsx
-│   │   │   ├── authContextDefinition.jsx
-│   │   │   └── useAuth.jsx
-│   │   │
-│   │   ├── pages/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── ...
-│   │
-│   ├── index.html
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── vite.config.js
-│   └── ...
-│
-├── .gitignore
-└── README.md
+        EDU-Pilot 2.0/
+        ├── backend/
+        │   ├── app.py
+        │   ├── requirements.txt
+        │   └── tests/
+        ├── frontend/
+        │   ├── public/
+        │   ├── src/
+        │   │   ├── context/
+        │   │   ├── pages/
+        │   │   ├── App.jsx
+        │   │   └── main.jsx
+        │   ├── package.json
+        │   ├── package-lock.json
+        │   └── vite.config.js
+        ├── screenshots/
+        ├── .gitignore
+        └── README.md
 ```
-
-Important: Do not commit "venv", "node_modules", generated build output, ".env", or private database contents. Keep "requirements.txt" in the backend directory if that is where it currently resides.
+Generated files, private databases, virtual environments, and environment secrets should remain excluded from the repository.
 
 ---
 
-## 🗃️ Database Design
+## 🗄️ Database Design
 
-EduPilot uses SQLite with SQLAlchemy models.
+EduPilot uses SQLite with SQLAlchemy for persistence.
 
-The known application data areas include:
+| Data Area | Purpose |
+|---|---|
+| User | User account information and password hashes |
+| Saved Sessions | Saved topics, notes, summaries, and supported session data |
+| Quiz Attempts | Recorded quiz performance |
+| Study Plan Entries | Scheduled revision sessions and duration settings |
 
-Data model / area| Purpose
-"User"| Stores user account records and password hashes.
-"SavedSession"| Stores topic-based or document-based learning sessions and associated generated content.
-"QuizAttempt"| Records quiz performance, including topic, score, total questions, percentage, difficulty, answers, and creation time.
-"StudyPlanEntry"| Supports scheduled study reviews and their duration settings.
-
-The exact field definitions, relationships, constraints, and initialization process should be confirmed against the final database models in "backend/app.py".
+The exact model fields and relationships are defined by the current backend implementation.
 
 ---
 
 ## 🔌 API Overview
 
-The Flask backend exposes API endpoints consumed by the React frontend.
+The backend exposes HTTP endpoints consumed by the frontend.
 
-The following endpoints have been identified in the shared backend code:
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/api/upload-file` | POST | Upload and analyse supported documents |
+| `/api/quiz-attempt` | POST | Save a quiz attempt |
+| `/api/quiz-attempts` | GET | Retrieve quiz attempt history |
+| `/api/weak-topics` | GET | Analyse weak topics based on quiz performance |
 
-Endpoint| Method| Purpose
-"/api/upload-file"| POST| Upload and analyse a supported study document.
-"/api/quiz-attempt"| POST| Save a completed quiz attempt for the authenticated user.
-"/api/quiz-attempts"| GET| Retrieve quiz attempts for the authenticated user.
-"/api/weak-topics"| GET| Analyse recent quiz attempts for weaker and stronger topics.
+Other routes support the application's learning, authentication, chatbot, and study-planning workflows. Refer to `backend/app.py` for the complete current API implementation.
 
-The frontend also uses operations for topic-based content generation, quiz generation, study-plan management, and chatbot interactions.
-
-Before publication, add the exact route names and HTTP methods for those operations directly from the final "backend/app.py". Do not treat this table as a complete API specification.
-
---- 
+---
 
 ## ⚙️ Installation and Setup
 
-**Prerequisites**
+### Prerequisites
 
-Install the following tools:
+- Python
+- Node.js and npm
+- Git
+- Google Gemini API key for configured AI features
+- YouTube Data API key if required by the enabled video integration
 
-- Python compatible with the project's backend dependencies.
-- Node.js and npm.
-- Git, if cloning the project.
-- A Google Gemini API key for AI-powered features.
-- A YouTube Data API key if the enabled backend functionality requires it.
+### 1. Clone the Repository
 
-### 1. **Clone the Repository**
+Replace the placeholder with the actual repository URL.
 
-After the GitHub repository has been created, use its actual URL:
+```bash
+git clone <YOUR-EDUPILOT-REPOSITORY-URL>
+cd "EDU-Pilot 2.0"
+```
 
-> git clone <YOUR-EDUPILOT-REPOSITORY-URL>
-> cd "EDU-Pilot 2.0"
+### 2. Set Up the Backend
 
-The directory name in the command should match the directory created by Git when cloning.
-
-### 2. **Configure the Backend**
-
-Open a terminal and navigate to the backend directory:
-
-> cd backend
-
-Create a Python virtual environment:
-
-> python -m venv venv
-
-Activate it on Windows:
+```bash
+cd backend
+python -m venv venv
+```
+On Windows: 
 
 > venv\Scripts\activate
 
@@ -594,121 +384,91 @@ On macOS or Linux:
 
 > source venv/bin/activate
 
-Install the backend dependencies:
+Install Dependencies 
 
-> pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
 
-If your project uses a different dependency filename, use the file present in the repository.
+### 3. Configure Environment Variables
 
-### 3. **Configure Environment Variables**
+Create a local .env file using the variable names expected by the backend.
 
-Create a ".env" file in the directory from which the backend loads its environment configuration.
+>GEMINI_API_KEY=your_gemini_api_key
 
-> Example:
+>YOUTUBE_API_KEY=your_youtube_api_key
 
-> GEMINI_API_KEY=your_gemini_api_key
-> YOUTUBE_API_KEY=your_youtube_api_key
-> JWT_SECRET_KEY=replace_with_a_long_random_secret
+>JWT_SECRET_KEY=replace_with_a_long_random_secret
 
-Use the exact variable names expected by the backend. These values are placeholders, not working credentials.
+These are placeholders, not working credentials. Never publish real keys or secrets.
 
-Never upload real API keys or secret values to GitHub.
+### 4. Set Up the Frontend
 
-### 4. **Configure the Frontend**
+Open a separate terminal:
 
-Open a second terminal and navigate to the frontend directory:
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-> cd frontend
+### 5. Run the Backend
 
-> npm install
+From the backend directory, activate the virtual environment and run:
 
-Check "frontend/package.json" for the available development scripts.
-
-If the project uses the standard Vite development script, start it with:
-
-> npm run dev
-
-### 5. **Configure Backend Connectivity**
-
-Ensure that the frontend's API client points to the correct local backend address and that the Flask server allows the frontend origin where required.
-
-The API base URL and port should match the actual application configuration.
-
-**Running the Application**
-
-Start the Flask backend using the project's configured entry point and launch the frontend in a separate terminal.
-
-For example, if "app.py" contains the Flask application entry point and the frontend uses Vite:
-
-**Backend terminal**
-
-> cd backend
-
-> venv\Scripts\activate
-
-> python app.py
-
-**Frontend terminal**
-
-> cd frontend
-
-> npm run dev
-
-Use the local frontend URL displayed by Vite. The backend address and port depend on the application's configuration.
-
-The first-run process may also require database initialization if the SQLite database is not already present.
+```bash
+python app.py
+```
+Ensure the frontend API base URL, backend port, and CORS configuration match your local setup. Follow any database initialization requirements in the current application code.
 
 ---
 
 ## 🔑 Environment Configuration
 
-Variable| Description
-"GEMINI_API_KEY"| Credential for the configured Google Gemini API integration.
-"YOUTUBE_API_KEY"| Credential for the YouTube Data API integration, if enabled.
-"JWT_SECRET_KEY"| Secret used by the JWT authentication configuration.
+| Variable | Purpose |
+|---|---|
+| `GEMINI_API_KEY` | Credential for the configured Gemini integration |
+| `YOUTUBE_API_KEY` | Credential for the YouTube Data API, if enabled |
+| `JWT_SECRET_KEY` | Secret for JWT authentication |
 
-Environment variable names must match the code. Do not include actual credential values in the README.
+Use the exact variable names referenced in the backend. Do not include actual credential values in this README.
 
 ---
 
 ## 🛡️ Security and Best Practices
 
 - Store API keys and secrets in environment variables.
-- Add ".env" to ".gitignore".
-- Never commit virtual environments or "node_modules".
-- Do not publish databases containing private user information.
-- Use strong JWT secrets and keep them private.
-- Keep password handling on the backend and use secure password hashing.
-- Protect user-specific API operations with authentication and authorization checks.
-- Validate uploaded file types and handle extraction failures safely.
-- Review API error handling before exposing the application publicly.
-- Configure production settings separately from local development.
+- Exclude .env files from version control.
+- Do not commit virtual environments or node_modules.
+- Avoid publishing databases containing private user information.
+- Use strong JWT secrets.
+- Validate uploaded files and handle extraction errors safely.
+- Verify authentication and user ownership for protected operations.
+- Configure production security settings separately from local development.
 
 ---
 
 ## 📌 Current Scope and Limitations
 
-- AI-generated content depends on the availability and configuration of the external AI service.
-- Generated notes, summaries, quizzes, and explanations may require user review for accuracy.
-- Document processing depends on the formats and extraction libraries supported by the backend.
-- Learning analysis depends on the quiz history available for the user.
-- The application currently uses SQLite; deployment and concurrent-use requirements may call for a different database configuration.
-- Local development instructions may require adjustment for a production deployment.
+- AI-generated content depends on the configured external service.
+- Generated explanations and learning material may require verification.
+- Document processing depends on supported file formats and extraction libraries.
+- Learning analysis depends on the available quiz history.
+- SQLite may require a different database configuration for some production workloads.
+- Local development instructions may need adjustment for deployment.
 
 ---
 
 ## 🚀 Future Enhancements
 
-Potential areas for future development include:
+- More detailed learning analytics and progress visualizations.
+- Improved topic-level performance reports.
+- Expanded document support and extraction reliability.
+- Additional study-planning and revision features.
+- Automated testing and deployment improvements.
+- Further accessibility and mobile usability enhancements.
 
-- Improved learning analytics and progress visualizations.
-- More detailed topic-level performance reports.
-- Additional document formats and more robust extraction.
-- Expanded study-planning and revision workflows.
-- Improved testing, deployment, and observability.
-- Further accessibility and mobile usability improvements.
-
-These are potential enhancements, not claims that the features are already implemented.
+These are potential improvements, not claims that they are already implemented.
 
 ---
 
@@ -716,11 +476,8 @@ These are potential enhancements, not claims that the features are already imple
 
 **G Srinivas**
 
-> **GitHub: "@srinivasgowdruu" (https://github.com/srinivasgowdruu)**
+**GitHub:** [G Srinivas](https://github.com/srinivasgowdruu)
 
 ---
 
-<p align="center">
-  <strong>EduPilot</strong><br>
-  Your learning companion for smarter study sessions.
-</p>
+## EduPilot — Your learning companion for smarter study sessions.
